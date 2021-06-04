@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Happy monthsary love!!</title>
+	
+	<style type="text/css">
+        
+        *{
+            background: #fff;
+        }
+        
+        #loveHeart{
+            background: transparent;
+            background: url('tenor.gif') no-repeat center;
+			background-size: 450px;
+			width: 600px;
+			height: 600px;
+        }
+		#copyright{
+			font-family: 'Montserrat',sans-serif;
+			opacity: 0.8;
+		}
+		#copyright a{
+			text-decoration: none;
+		}
+		#copyright a:hover{
+			text-decoration: none;
+			color:#339933;
+		}
+       	</style>
+   	<link href="style1.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="monthsary.js"></script>
+    <script type="text/javascript" src="month.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code" >
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* Today, it's our 15th monthsary <3</span><br />
+				<span class="space"/><span class="comments">* So i made this to make your day feel special!!</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				I want to say I love you so much!!<br />
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* june 5th, two things ang importanteng nangyari sa buhay mo!!</span><br />
+				<span class="space"/><span class="comments">* first, ang <span class="keyword">monthsary</span> natin of course!</span><br />
+				<span class="space"/><span class="comments">* second, ang <span class="keyword"> pagtatapos</span> ng school year mo!</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				These past few weeks have been hell for you<br />
+				And I want to make it a little bit better<br />
+				<span class="comments">// sorry kung dami ko nang utang sa'yo</span><br />
+				<span class="comments">// babayarin ko rin po XD</span><br />
+				I personally congratulate you<br />
+				for finishing 2nd year :><br />
+				<span class="keyword">if</span>(yearLevel.equals(<span class="string">"2nd year"</span>)){</br>
+				    u.yearLevel ++;</br>
+				}</br>
+				<span class="comments">// I'm always here for you mi love.</span><br />
+				<span class="keyword">new</span> Thread (){<br />
+				@Override </br>
+				<span class="comments">// Fearlessly, I wish youuuu</span><br />
+				while(true){</br>
+				<span class="comments">// wisdom,</span><br />
+				u.wisdom ++;</br>
+				<span class="comments">// joy,</span><br />
+				u.joy ++;</br>
+				}.start()</br>
+				<span class="comments">// Be ready love, your life has just begun.</span><br />
+				System.out.println(<span class="string">"Happy Monthsary and I love youuuuuuuuuu!!"</span>);
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden" style="display:none"></canvas>
+			</div>
+		</div>
+		<div id="copyright">
+			<hr>
+			<p>Made with love by your pinakamamahal :></p>
+		</hr>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2021,5, 6);
+		together.setHours(8);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Sorry, browser doesn't support this!"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
